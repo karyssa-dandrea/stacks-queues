@@ -22,13 +22,12 @@ class LinkedListNode {
   }
 
   getList() {
-    const list = "";
     // if next is null, we want to return the list
     // if next is not null, we return the list plus this.value
     if (!this.#next) {
-      return list;
+      return this.#value;
     } else {
-      return list + this.#value;
+      return `${this.#value} ${this.#next.getList()}`;
     }
   }
 
