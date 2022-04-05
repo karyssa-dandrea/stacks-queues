@@ -21,6 +21,17 @@ class LinkedListNode {
     }
   }
 
+  getList() {
+    const list = "";
+    // if next is null, we want to return the list
+    // if next is not null, we return the list plus this.value
+    if (!this.#next) {
+      return list;
+    } else {
+      return list + this.#value;
+    }
+  }
+
   // value
   // node as null until we set the next node so need add function
 }
@@ -28,5 +39,11 @@ class LinkedListNode {
 const root = new LinkedListNode("A");
 const nodeB = new LinkedListNode("B");
 root.add(nodeB);
-
-console.log("root", root);
+console.log(root.getList()); // 'A B'
+const nodeC = new LinkedListNode("C");
+const nodeD = new LinkedListNode("D");
+const nodeE = new LinkedListNode("E");
+root.add(nodeC);
+root.add(nodeD);
+root.add(nodeE);
+console.log(root.getList());
