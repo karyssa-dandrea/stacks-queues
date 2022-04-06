@@ -7,7 +7,7 @@ class BinaryTreeNode {
 
   add(node) {
     //duplicate removal
-    if (this.node.value === this.value) {
+    if (node.value === this.value) {
       return;
     }
     if (node.value < this.value) {
